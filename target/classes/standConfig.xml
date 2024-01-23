@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context.xsd
+   http://www.springframework.org/schema/util
+   http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+    <util:list list-class="java.util.Vector" id="names">
+        <value>vedant</value>
+        <value>yashdeep</value>
+        <value>vishal</value>
+        <value>sai</value>
+    </util:list>
+    <util:map map-class="java.util.Hashtable" id="map1">
+        <entry key="1" value="Abhir"/>
+        <entry key="2" value="very naughty"/>
+    </util:map>
+    <util:properties id="prop">
+        <prop key="1">shriram</prop>
+        <prop key="2">shinde</prop>
+        <prop key="3">shinde</prop>
+    </util:properties>
+    <bean id="1" class="org.example.stand.Bali">
+        <property name="name" ref="names"/>
+        <property name="pillu" ref="map1"/>
+        <property name="prop" ref="prop"/>
+    </bean>
+
+
+
+    <!-- more bean definitions go here -->
+</beans>
